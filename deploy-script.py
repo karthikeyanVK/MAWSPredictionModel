@@ -22,7 +22,7 @@ def run(data):
     try:
         data = json.loads(data)
         result = model.predict(data['data'])
-        return {'data' : result.tolist() , 'message' : "Successfully classified Iris"}
+        return {'data' : result.tolist() , 'message' : "Successfully classified Tender"}
     except Exception as e:
         error = str(e)
-        return {'data' : error , 'message' : 'Failed to classify iris'}
+        return {'data' : error , 'message' : 'Failed to classify data'}
